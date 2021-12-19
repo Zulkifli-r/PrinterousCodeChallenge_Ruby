@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <%= link_to root_path,class:"nav-brand" do %>
+      <%= render "shared/logo" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if current_user.admin? %>
+          <li class="nav-item">
+            <%= link_to "Create Organization", new_organization_path, class:"nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+      <%= form_tag(root_path, method: :get, class:"d-flex mx-5") do %>
+        <%= text_field_tag(:search, params[:search], class:"form-control me-2") %>
+        <%= submit_tag("Search", class: "btn btn-outline-success", name:nil) %>
+      <% end %>
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" >
+            <%= current_user.name %>
+          </a>
+          <li class="nav-item"><%= link_to "| Sign Out", destroy_user_session_path, method: :delete , class:"nav-link" %></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,28 @@
+<%= form_with(model: organization) do |form| %>
+  <% if organization.errors.any? %>
+    <%= render "shared/errors", model:organization %>
+  <% end %>
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :phone, class:"form-label" %>
+    <%= form.text_field :phone, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :website, class:"form-label" %>
+    <%= form.text_field :website, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :logo, class:"form-label" %>
+    <%= form.file_field :logo, class:"form-control" %>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

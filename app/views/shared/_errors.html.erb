@@ -1,0 +1,8 @@
+<div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+  <ul>
+    <% model.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
