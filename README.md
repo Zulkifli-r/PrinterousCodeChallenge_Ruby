@@ -19,7 +19,7 @@ the default database is using sqlite so just run:
 
 ```sh
 
-rails db:migrate
+rails db:drop db:create db:migrate
 
 rails db:seed // to seed admin user
 
