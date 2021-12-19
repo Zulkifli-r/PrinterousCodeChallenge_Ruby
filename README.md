@@ -1,24 +1,38 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Printerous Code Challenge
 
-Things you may want to cover:
+  
 
-* Ruby version
+## Installation
 
-* System dependencies
+```sh
 
-* Configuration
+git clone git@github.com:Zulkifli-r/PrinterousCodeChallenge_Ruby.git
 
-* Database creation
+cd PrinterousCodeChallenge_Ruby
 
-* Database initialization
+bundle install
 
-* How to run the test suite
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+the default database is using sqlite so just run:
 
-* Deployment instructions
+```sh
 
-* ...
+rails db:migrate
+
+rails db:seed // to seed admin user
+
+rails s // to serve the app at http://localhost:3000 (default)
+
+```
+
+login to the app as super admin using :
+
+```
+
+email: super@admin.com
+
+password: password
+
+```
