@@ -12,6 +12,7 @@ git clone git@github.com:Zulkifli-r/PrinterousCodeChallenge_Ruby.git
 cd PrinterousCodeChallenge_Ruby
 
 bundle install
+yarn install
 
 ```
 
