@@ -1,0 +1,9 @@
+<div class="card my-5">
+  <div class="card-header">
+    <h4>Create New Person for <strong><%= @organization.name %></strong></h4>
+  </div>
+  <div class="card-body">
+    <%= render 'form', person: @person %>
+    <%= link_to 'Back', organization_path(@organization), class:"btn btn-primary" %>
+  </div>
+</div>
